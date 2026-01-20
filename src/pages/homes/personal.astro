@@ -12,7 +12,7 @@ import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
 import { getPermalink } from '~/utils/permalinks';
 
 const metadata = {
-  title: 'Personal Biography Kevin Falcones',
+  title: 'Curriculum Online - Kevin Falcones',
 };
 ---
 
@@ -26,7 +26,7 @@ const metadata = {
         { text: 'Resume', href: '#resume' },
         { text: 'Porfolio', href: '#porfolio' },
         { text: 'Blog', href: '#blog' },
-        { text: 'Github', href: 'https://github.com/arthelokyo' },
+        { text: 'Github', href: 'https://github.com/KevinFalcones' },
       ]}
       actions={[
         {
@@ -43,14 +43,15 @@ const metadata = {
 
   <Hero
     id="hero"
-    title="-Kevin Falcones"
-    tagline="Personal Web Demo"
+    title="Kevin Falcones"
+    tagline="Curriculum Online"
     actions={[{ variant: 'primary', text: 'Hire me', href: getPermalink('/contact#form') }]}
   >
     <Fragment slot="subtitle">
-      I'm a Systems Engineer passionate about crafting visual stories. <br /> With 15 years of experience and a degree from
-      Guayaquil University's . I infuse vitality into brands and designs, transforming concepts into captivating
-      realities.
+      Ingeniero en Sistemas y MBA con Especialidad en Trasformación Digital. <br /> Con más de 15 años de 
+      certificada experiencia nacional e internacional en diversas áreas tecnológicas de empresas bancarias, 
+      telecomunicacionales, comerciales y públicas. <br /> Estoy determinado a superar los retos profesionales 
+      indistintamente de la tecnología, lenguaje, equipo de trabajo, proyecto, cargo o presión laboral.
     </Fragment>
   </Hero>
 
@@ -61,26 +62,26 @@ const metadata = {
     columns={3}
     items={[
       {
-        icon: 'tabler:brand-dribbble',
+        icon: 'tabler:brand-linkedin',
         callToAction: {
           target: '_blank',
-          text: 'Dribbble',
+          text: 'LinkedIn',
           href: '#',
         },
       },
       {
-        icon: 'tabler:brand-behance',
+        icon: 'tabler:brand-facebook',
         callToAction: {
           target: '_blank',
-          text: 'Behance',
+          text: 'Facebook',
           href: '#',
         },
       },
       {
-        icon: 'tabler:brand-pinterest',
+        icon: 'tabler:brand-youtube',
         callToAction: {
           target: '_blank',
-          text: 'Pinterest',
+          text: 'YouTube',
           href: '#',
         },
       },
@@ -93,18 +94,24 @@ const metadata = {
     }}
   >
     <Fragment slot="content">
-      <h2 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">About me</h2>
+      <h2 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Sobre mí</h2>
       <p>
-        Welcome to my creative journey. My work is a testament to my commitment to bringing ideas to life, where each
-        pixel becomes a brushstroke in the canvas of imagination.
+        Mi compromiso es aportar soluciones robustas en automatización, transformación digital y cumplimiento de proyectos complejos,
+         siempre con el objetivo de generar un valor diferencial que trascienda lo tecnológico y conecte 
+         directamente con las necesidades del cliente.
       </p>
       <br />
       <p>
-        I find inspiration in the world around me, whether through the pages of a captivating novel, the intricate
-        details of typography, or the vibrant hues of nature during my outdoor escapades.
+        Mi día a día es un equilibrio constante entre mi pasión por la innovación digital y mi vocación de servicio a la comunidad,
+         la música y la comunicación, compartiendo este viaje en mis plataformas digitales para inspirar a otros 
+         a integrar sus pasiones con su profesión.
       </p>
       <br />
-      <p>If you're curious to dive deeper into my work, you can follow me:</p>
+      <p>
+        Te invito a explorar mis redes sociales y mi canal de YouTube, espacios donde no solo verás al ingeniero, 
+        sino también al hombre de fe, al músico y al comunicador que busca dejar una huella positiva y con propósito en la sociedad.
+       ¡Conectemos!:
+      </p>
     </Fragment>
 
     <Fragment slot="bg">
@@ -116,7 +123,7 @@ const metadata = {
 
   <Steps
     id="resume"
-    title="Work experience"
+    title="Experience Laboral"
     items={[
       {
         title:
@@ -138,7 +145,7 @@ const metadata = {
 
   <Steps
     id="resume"
-    title="Education"
+    title="Educación"
     items={[
       {
         title: `Master of Fine Arts in Graphic Design <br /> <span class="font-normal">New York University's School of Design</span> <br /> <span class="text-sm font-normal">2018 - 2020</span>`,
