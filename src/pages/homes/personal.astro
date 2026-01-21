@@ -22,16 +22,16 @@ const metadata = {
     <Header
       links={[
         { text: 'Home', href: '#' },
-        { text: 'About', href: '#about' },
-        { text: 'Resume', href: '#resume' },
-        { text: 'Porfolio', href: '#porfolio' },
+        { text: 'Sobre mi', href: '#about' },
+        { text: 'Resumen', href: '#resume' },
+        { text: 'Portafolio', href: '#porfolio' },
         { text: 'Blog', href: '#blog' },
         { text: 'Github', href: 'https://github.com/KevinFalcones' },
       ]}
       actions={[
         {
-          text: 'Hire me',
-          href: '#',
+          text: 'Contrátame',
+          href: getPermalink('/contact#form'),
         },
       ]}
       isSticky
@@ -45,7 +45,7 @@ const metadata = {
     id="hero"
     title="Kevin Falcones"
     tagline="Curriculum Online"
-    actions={[{ variant: 'primary', text: 'Hire me', href: getPermalink('/contact#form') }]}
+    actions={[{ variant: 'primary', text: 'Contrátame', href: getPermalink('/contact#form') }]}
   >
     <Fragment slot="subtitle">
       Ingeniero en Sistemas y MBA con Especialidad en Trasformación Digital. <br /> Con más de 15 años de 
@@ -66,7 +66,7 @@ const metadata = {
         callToAction: {
           target: '_blank',
           text: 'LinkedIn',
-          href: '#',
+          href: 'https://www.linkedin.com/in/kevinfalcones/',
         },
       },
       {
@@ -74,7 +74,7 @@ const metadata = {
         callToAction: {
           target: '_blank',
           text: 'Facebook',
-          href: '#',
+          href: 'https://www.facebook.com/KevinFalconesOficial',
         },
       },
       {
@@ -82,7 +82,7 @@ const metadata = {
         callToAction: {
           target: '_blank',
           text: 'YouTube',
-          href: '#',
+          href: 'https://www.youtube.com/@kevinfalconesoficial',
         },
       },
     ]}
@@ -110,7 +110,7 @@ const metadata = {
       <p>
         Te invito a explorar mis redes sociales y mi canal de YouTube, espacios donde no solo verás al ingeniero, 
         sino también al hombre de fe, al músico y al comunicador que busca dejar una huella positiva y con propósito en la sociedad.
-       ¡Conectemos!:
+       ¡Conectemos!
       </p>
     </Fragment>
 
