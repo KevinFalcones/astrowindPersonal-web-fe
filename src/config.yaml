@@ -1,5 +1,5 @@
 site:
-  name: Kevin Falcones
+  name: KF
   site: 'https://astrowind.vercel.app'
   base: '/'
   trailingSlash: false
@@ -9,7 +9,7 @@ site:
 # Default SEO metadata
 metadata:
   title:
-    default: AstroWind
+    default: Kevin Falcones
     template: '%s — AstroWind'
   description: "\U0001F680 Bienvenidos! Aquí encontrarás Sermones, Alabanzas, Invitaciones, Portafolio Profesional, Biografía, Artículos & Blogs."
   robots:
