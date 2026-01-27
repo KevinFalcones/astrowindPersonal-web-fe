@@ -22,15 +22,15 @@ const metadata = {
     <Header
       links={[
         { text: 'Home', href: '#' },
-        { text: 'Sobre mi', href: '#about' },
-        { text: 'Resumen', href: '#resume' },
-        { text: 'Portafolio', href: '#porfolio' },
+        { text: 'About', href: '#about' },
+        { text: 'Resume', href: '#resume' },
+        { text: 'Portfolio', href: '#porfolio' },
         { text: 'Blog', href: '#blog' },
         { text: 'Github', href: 'https://github.com/KevinFalcones' },
       ]}
       actions={[
         {
-          text: 'Contrátame',
+          text: 'Hire me',
           href: getPermalink('/contact#form'),
         },
       ]}
@@ -45,7 +45,7 @@ const metadata = {
     id="hero"
     title="Kevin Falcones"
     tagline="Curriculum Online"
-    actions={[{ variant: 'primary', text: 'Contrátame', href: getPermalink('/contact#form') }]}
+    actions={[{ variant: 'primary', text: 'Hire me', href: getPermalink('/contact#form') }]}
   >
     <Fragment slot="subtitle">
       Ingeniero en Sistemas y MBA con Especialidad en Trasformación Digital. <br /> Con más de 15 años de 
@@ -94,7 +94,7 @@ const metadata = {
     }}
   >
     <Fragment slot="content">
-      <h2 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Sobre mí</h2>
+      <h2 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">About me</h2>
       <p>
         Mi compromiso es aportar soluciones robustas en automatización, transformación digital y cumplimiento de proyectos complejos,
          siempre con el objetivo de generar un valor diferencial que trascienda lo tecnológico y conecte 
@@ -123,18 +123,36 @@ const metadata = {
 
   <Steps
     id="resume"
-    title="Experience Laboral"
+    title="Experience"
     items={[
       {
         title:
-          'Graphic Designer <br /> <span class="font-normal">ABC Design Studio, New York, NY</span> <br /> <span class="text-sm font-normal">2021 - Present</span>',
+          'DevOps Delivery <br /> <span class="font-normal">Banco Guayaquil, Guayaquil, ECUADOR</span> <br /> <span class="text-sm font-normal">Feb 2025 - Present</span>',
         description: `Collaborate with clients to understand design requirements and objectives. <br /> Develop branding solutions, including logos, color palettes, and brand guidelines. <br /> Design marketing materials such as brochures, posters, and digital assets. <br /> Create visually appealing user interfaces for websites and applications.`,
         icon: 'tabler:briefcase',
       },
       {
         title:
-          'Junior Graphic Designer <br /> <span class="font-normal">XYZ Creative Agency, Los Angeles, CA</span> <br /> <span class="text-sm font-normal">2018 - 2021</span>',
-        description: `Assisted senior designers in creating design concepts and visual assets. <br /> Contributed to the development of brand identities and marketing collateral. <br /> Collaborated with the marketing team to ensure consistent design across campaigns. <br /> Gained hands-on experience in various design software and tools.`,
+          'Cloud Administrator <br /> <span class="font-normal">Tienda Pago, DF, MEXICO</span> <br /> <span class="text-sm font-normal">Jul 2023 - Oct 2024</span>',
+        description: `Collaborate with clients to understand design requirements and objectives. <br /> Develop branding solutions, including logos, color palettes, and brand guidelines. <br /> Design marketing materials such as brochures, posters, and digital assets. <br /> Create visually appealing user interfaces for websites and applications.`,
+        icon: 'tabler:briefcase',
+      },
+      {
+        title:
+          'DevOps Engineer <br /> <span class="font-normal">Tienda Pago, Florida, USA</span> <br /> <span class="text-sm font-normal">Jun 2022 - Jul 2023</span>',
+        description: `Collaborate with clients to understand design requirements and objectives. <br /> Develop branding solutions, including logos, color palettes, and brand guidelines. <br /> Design marketing materials such as brochures, posters, and digital assets. <br /> Create visually appealing user interfaces for websites and applications.`,
+        icon: 'tabler:briefcase',
+      },
+      {
+        title:
+          'Testing Automation Engineer <br /> <span class="font-normal">Banco Bolivariano, Guayaquil, ECUADOR</span> <br /> <span class="text-sm font-normal">Aug 2021 - Jun 2022</span>',
+        description: `Collaborate with clients to understand design requirements and objectives. <br /> Develop branding solutions, including logos, color palettes, and brand guidelines. <br /> Design marketing materials such as brochures, posters, and digital assets. <br /> Create visually appealing user interfaces for websites and applications.`,
+        icon: 'tabler:briefcase',
+      },
+      {
+        title:
+          'DevOps Architect <br /> <span class="font-normal">Banco Del Pacifico, Guayaquil, ECUADOR</span> <br /> <span class="text-sm font-normal">Oct 2020 - Aug 2021</span>',
+        description: `Collaborate with clients to understand design requirements and objectives. <br /> Develop branding solutions, including logos, color palettes, and brand guidelines. <br /> Design marketing materials such as brochures, posters, and digital assets. <br /> Create visually appealing user interfaces for websites and applications.`,
         icon: 'tabler:briefcase',
       },
     ]}
@@ -145,7 +163,7 @@ const metadata = {
 
   <Steps
     id="resume"
-    title="Educación"
+    title="Education"
     items={[
       {
         title: `Master of Fine Arts in Graphic Design <br /> <span class="font-normal">New York University's School of Design</span> <br /> <span class="text-sm font-normal">2018 - 2020</span>`,

@@ -11,7 +11,7 @@ metadata:
   title:
     default: Kevin Falcones
     template: '%s — AstroWind'
-  description: "\U0001F680 Bienvenidos! Aquí encontrarás Sermones, Alabanzas, Invitaciones, Portafolio Profesional, Biografía, Artículos & Blogs."
+  description: "\U0001F680 Bienvenidos! Aquí encontrarás Sermones, Alabanzas, Actividades, Portafolio Profesional, Biografía, Artículos & Blogs."
   robots:
     index: true
     follow: true
