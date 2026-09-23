@@ -19,24 +19,26 @@ const metadata = {
 <Layout metadata={metadata}>
   <Fragment slot="announcement"></Fragment>
   <Fragment slot="header">
-    <Header
-      links={[
-        { text: 'Home', href: '#' },
-        { text: 'Sobre mi', href: '#about' },
-        { text: 'Resumen', href: '#resume' },
-        { text: 'Portafolio', href: '#porfolio' },
-        { text: 'Blog', href: '#blog' },
-        { text: 'Github', href: 'https://github.com/KevinFalcones' },
-      ]}
-      actions={[
-        {
-          text: 'Contrátame',
-          href: getPermalink('/contact#form'),
-        },
-      ]}
-      isSticky
-      showToggleTheme
-    />
+   <Header
+   links={[
+      { text: 'Sobre mí', href: '#about' },
+      { text: 'Experiencia', href: '#resume' },
+      { text: 'Educación', href: '#education' },
+      { text: 'Certificaciones', href: '#certifications' },
+      { text: 'Proyectos', href: '#projects' },
+      { text: 'Referencias', href: '#references' },
+      { text: 'GitHub', href: 'https://github.com/KevinFalcones', target: '_blank' },
+    ]}
+    actions={[
+      {
+        text: 'Contrátame',
+        href: 'mailto:johvin73@gmail.com',
+        target: '_blank',
+      },
+    ]}
+    isSticky
+    showToggleTheme
+  />
   </Fragment>
 
   <!-- Hero2 Widget ******************* -->
@@ -120,294 +122,904 @@ const metadata = {
   </Content>
 
   <!-- Steps Widget ****************** -->
+  <div class="mb-6">
+    <a
+      href="/cv.pdf"
+      download="CV_KevinFalcones_DevOps.pdf"
+      target="_blank"
+      class="inline-flex items-center gap-2 px-4 py-2 text-sm font-semibold rounded-lg text-white bg-blue-600 hover:bg-blue-700 transition shadow-sm"
+    >
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+      </svg>
+      Descargar CV en PDF
+    </a>
+  </div>
 
-  <Steps
+<Steps
     id="resume"
-    title="Experience Laboral"
+    title="Experiencia Laboral"
     items={[
       {
         title:
-          'Graphic Designer <br /> <span class="font-normal">ABC Design Studio, New York, NY</span> <br /> <span class="text-sm font-normal">2021 - Present</span>',
-        description: `Collaborate with clients to understand design requirements and objectives. <br /> Develop branding solutions, including logos, color palettes, and brand guidelines. <br /> Design marketing materials such as brochures, posters, and digital assets. <br /> Create visually appealing user interfaces for websites and applications.`,
-        icon: 'tabler:briefcase',
+          'DEVSECOPS & SRE AZURE <br /> <span class="font-normal inline-flex items-center gap-2 mt-1.5"><span class="w-11 h-11 rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-xs inline-flex items-center justify-center p-1"><img src="/imagenes/tiendapago_logo.png" alt="Tienda Pago" class="w-full h-full object-contain" /></span> TIENDA PAGO , Dpto. Tecnología , MEXICO</span> <br /> <span class="inline-block mt-2.5 px-3 py-1 text-sm font-bold rounded-full bg-slate-100 text-slate-800 dark:bg-slate-800 dark:text-slate-200 border border-slate-200 dark:border-slate-700">[ 2022 - 2024 ]</span>',
+        description: `<ul class="list-disc list-inside space-y-1 mt-2 text-muted">
+<li>Liderazgo en la adopción de <strong>Azure DevOps</strong> y AzRepos</li>
+<li>Administración integral de <strong>Azure Cloud</strong> (infraestructura, redes y BD)</li>
+<li>Implementación de IaC con <strong>Bicep</strong>, <strong>Terraform</strong>, <strong>Docker</strong> y <strong>AKS</strong></li>
+<li>Gestión de AzAdvanced Security, observabilidad y monitoreo continuo</li>
+</ul>
+<div class="flex flex-wrap gap-2 mt-4 mb-4">
+  <span class="text-sm px-3 py-1 rounded-md font-semibold bg-blue-50 text-blue-900 border border-blue-200/90 dark:bg-blue-950/40 dark:text-blue-200 dark:border-blue-800">Azure DevOps</span>
+  <span class="text-sm px-3 py-1 rounded-md font-semibold bg-blue-50 text-blue-900 border border-blue-200/90 dark:bg-blue-950/40 dark:text-blue-200 dark:border-blue-800">Docker</span>
+  <span class="text-sm px-3 py-1 rounded-md font-semibold bg-blue-50 text-blue-900 border border-blue-200/90 dark:bg-blue-950/40 dark:text-blue-200 dark:border-blue-800">Terraform</span>
+  <span class="text-sm px-3 py-1 rounded-md font-semibold bg-blue-50 text-blue-900 border border-blue-200/90 dark:bg-blue-950/40 dark:text-blue-200 dark:border-blue-800">AKS</span>
+</div>`,
+        icon: 'tabler:cloud-computing',
       },
       {
         title:
-          'Junior Graphic Designer <br /> <span class="font-normal">XYZ Creative Agency, Los Angeles, CA</span> <br /> <span class="text-sm font-normal">2018 - 2021</span>',
-        description: `Assisted senior designers in creating design concepts and visual assets. <br /> Contributed to the development of brand identities and marketing collateral. <br /> Collaborated with the marketing team to ensure consistent design across campaigns. <br /> Gained hands-on experience in various design software and tools.`,
-        icon: 'tabler:briefcase',
+          'SENIOR TESTING & AUTOMATION <br /> <span class="font-normal inline-flex items-center gap-2 mt-1.5"><span class="w-12 h-12 rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-xs inline-flex items-center justify-center p-1"><img src="/imagenes/bolivariano_logo.png" alt="Banco Bolivariano" class="w-full h-full object-contain" /></span> BANCO BOLIVARIANO, Dpto. Testing y Automatización, ECUADOR</span> <br /> <span class="inline-block mt-2.5 px-3 py-1 text-sm font-bold rounded-full bg-slate-100 text-slate-800 dark:bg-slate-800 dark:text-slate-200 border border-slate-200 dark:border-slate-700">[ 2021 - 2022 ]</span>',
+        description: `<ul class="list-disc list-inside space-y-1 mt-2 text-muted">
+<li>Integración continua con <strong>Jenkins</strong> CI, SonarQube, <strong>OpenShift</strong>, AWS y <strong>Docker</strong></li>
+<li>Liderazgo en la adopción de prácticas DevOps dentro del equipo</li>
+<li>Automatización de pruebas funcionales con <strong>Selenium</strong> y <strong>Appium</strong></li>
+<li>Diseño y ejecución automatizada de planes de prueba críticos</li>
+</ul>
+<div class="flex flex-wrap gap-2 mt-4 mb-4">
+  <span class="text-sm px-3 py-1 rounded-md font-semibold bg-blue-50 text-blue-900 border border-blue-200/90 dark:bg-blue-950/40 dark:text-blue-200 dark:border-blue-800">Selenium</span>
+  <span class="text-sm px-3 py-1 rounded-md font-semibold bg-blue-50 text-blue-900 border border-blue-200/90 dark:bg-blue-950/40 dark:text-blue-200 dark:border-blue-800">Appium</span>
+  <span class="text-sm px-3 py-1 rounded-md font-semibold bg-blue-50 text-blue-900 border border-blue-200/90 dark:bg-blue-950/40 dark:text-blue-200 dark:border-blue-800">Jenkins</span>
+  <span class="text-sm px-3 py-1 rounded-md font-semibold bg-blue-50 text-blue-900 border border-blue-200/90 dark:bg-blue-950/40 dark:text-blue-200 dark:border-blue-800">OpenShift</span>
+</div>`,
+        icon: 'tabler:checklist',
+      },
+      {
+        title:
+          'DEVOPS ARCHITECT <br /> <span class="font-normal inline-flex items-center gap-2 mt-1.5"><span class="w-12 h-12 rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-xs inline-flex items-center justify-center overflow-hidden p-1"><img src="/imagenes/pacifico_logo.png" alt="Banco del Pacífico" class="w-full h-full object-contain scale-[1.38] -translate-y-2" /></span> BANCO DEL PACIFICO, Dpto. Arquitectura TI, ECUADOR</span> <br /> <span class="inline-block mt-2.5 px-3 py-1 text-sm font-bold rounded-full bg-slate-100 text-slate-800 dark:bg-slate-800 dark:text-slate-200 border border-slate-200 dark:border-slate-700">[ 2019 - 2021 ]</span>',
+        description: `<ul class="list-disc list-inside space-y-1 mt-2 text-muted">
+<li>Líder de equipo y rol principal SRE / DevOps Architect</li>
+<li>Estructuración de pipelines de <strong>CI/CD</strong> y soporte operativo crítico</li>
+<li>Acompañamiento a desarrollo para pipelines de integración continua</li>
+<li>Arquitectura de contenedores y nube en <strong>Docker</strong>, <strong>AWS</strong> y <strong>Azure</strong></li>
+</ul>
+<div class="flex flex-wrap gap-2 mt-4 mb-4">
+  <span class="text-sm px-3 py-1 rounded-md font-semibold bg-blue-50 text-blue-900 border border-blue-200/90 dark:bg-blue-950/40 dark:text-blue-200 dark:border-blue-800">AWS</span>
+  <span class="text-sm px-3 py-1 rounded-md font-semibold bg-blue-50 text-blue-900 border border-blue-200/90 dark:bg-blue-950/40 dark:text-blue-200 dark:border-blue-800">Azure</span>
+  <span class="text-sm px-3 py-1 rounded-md font-semibold bg-blue-50 text-blue-900 border border-blue-200/90 dark:bg-blue-950/40 dark:text-blue-200 dark:border-blue-800">Docker</span>
+  <span class="text-sm px-3 py-1 rounded-md font-semibold bg-blue-50 text-blue-900 border border-blue-200/90 dark:bg-blue-950/40 dark:text-blue-200 dark:border-blue-800">CI/CD</span>
+</div>`,
+        icon: 'tabler:cpu',
+      },
+      {
+        title:
+          'TESTER QA / RELEASE MANAGER <br /> <span class="font-normal inline-flex items-center gap-2 mt-1.5"><span class="w-12 h-12 rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-xs inline-flex items-center justify-center overflow-hidden p-1"><img src="/imagenes/pacifico_logo.png" alt="Banco del Pacífico" class="w-full h-full object-contain scale-[1.38] -translate-y-2" /></span> BANCO DEL PACIFICO, Dpto. Calidad y Control, ECUADOR</span> <br /> <span class="inline-block mt-2.5 px-3 py-1 text-sm font-bold rounded-full bg-slate-100 text-slate-800 dark:bg-slate-800 dark:text-slate-200 border border-slate-200 dark:border-slate-700">[ 2018 - 2019 ]</span>',
+        description: `<ul class="list-disc list-inside space-y-1 mt-2 text-muted">
+<li>Soporte nocturno para pases a producción bancarios (<strong>Release Mgmt</strong>)</li>
+<li>Diseño de casos de prueba, planes de testing y validación <strong>QA Testing</strong></li>
+<li>Administración de control de versiones con <strong>Azure DevOps</strong> y <strong>Git</strong></li>
+<li>Operación, configuración y monitoreo de aplicativos institucionales</li>
+</ul>
+<div class="flex flex-wrap gap-2 mt-4 mb-4">
+  <span class="text-sm px-3 py-1 rounded-md font-semibold bg-blue-50 text-blue-900 border border-blue-200/90 dark:bg-blue-950/40 dark:text-blue-200 dark:border-blue-800">Azure DevOps</span>
+  <span class="text-sm px-3 py-1 rounded-md font-semibold bg-blue-50 text-blue-900 border border-blue-200/90 dark:bg-blue-950/40 dark:text-blue-200 dark:border-blue-800">Git</span>
+  <span class="text-sm px-3 py-1 rounded-md font-semibold bg-blue-50 text-blue-900 border border-blue-200/90 dark:bg-blue-950/40 dark:text-blue-200 dark:border-blue-800">QA Testing</span>
+  <span class="text-sm px-3 py-1 rounded-md font-semibold bg-blue-50 text-blue-900 border border-blue-200/90 dark:bg-blue-950/40 dark:text-blue-200 dark:border-blue-800">Release Mgmt</span>
+</div>`,
+        icon: 'tabler:shield-check',
+      },
+    
+     {
+        title:
+          'MIDDLEWARE ADMINISTRATOR <br /> <span class="font-normal inline-flex items-center gap-2 mt-1.5"><span class="w-12 h-12 rounded-lg bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-xs inline-flex items-center justify-center overflow-hidden p-1"><img src="/imagenes/claro_logo.png" alt="Telefónica Claro" class="w-full h-full object-cover scale-135" /></span> TELEFONICA CLARO, Dpto. Producción TI Outsourcing, ECUADOR</span> <br /> <span class="inline-block mt-2.5 px-3 py-1 text-sm font-bold rounded-full bg-slate-100 text-slate-800 dark:bg-slate-800 dark:text-slate-200 border border-slate-200 dark:border-slate-700">[ 2016 - 2018 ]</span>',
+        description: `<ul class="list-disc list-inside space-y-1 mt-2 text-muted">
+<li>Administración de sistemas <strong>Linux</strong> y scripting avanzado con <strong>Shell / AWK</strong></li>
+<li>Gestión de incidentes y aplicación de marcos de trabajo <strong>ITIL</strong></li>
+<li>Administración, monitoreo y mantenimiento de servidores Middleware</li>
+<li>Generación de procesos ETL y parametrización de KPIs de servicios TI</li>
+</ul>
+<div class="flex flex-wrap gap-2 mt-4 mb-4">
+  <span class="text-sm px-3 py-1 rounded-md font-semibold bg-blue-50 text-blue-900 border border-blue-200/90 dark:bg-blue-950/40 dark:text-blue-200 dark:border-blue-800">Linux</span>
+  <span class="text-sm px-3 py-1 rounded-md font-semibold bg-blue-50 text-blue-900 border border-blue-200/90 dark:bg-blue-950/40 dark:text-blue-200 dark:border-blue-800">Shell / AWK</span>
+  <span class="text-sm px-3 py-1 rounded-md font-semibold bg-blue-50 text-blue-900 border border-blue-200/90 dark:bg-blue-950/40 dark:text-blue-200 dark:border-blue-800">ITIL</span>
+</div>`,
+        icon: 'tabler:server-2',
+      },
+      {
+        title:
+          'ROLES ANTERIORES / Ecuador <br /> <span class="inline-block mt-2.5 px-3 py-1 text-sm font-bold rounded-full bg-slate-100 text-slate-800 dark:bg-slate-800 dark:text-slate-200 border border-slate-200 dark:border-slate-700">[ 2012 - 2016 ]</span>',
+        description: `<div class="mt-4 max-w-xl divide-y divide-slate-200 dark:divide-slate-700">
+  <div class="grid grid-cols-[180px_1fr] items-center py-2.5 gap-4">
+    <span class="font-bold text-slate-900 dark:text-white text-base">Software Developer</span>
+    <span class="text-base text-muted">Telefónica Claro (2015 – 2016)</span>
+  </div>
+  <div class="grid grid-cols-[180px_1fr] items-center py-2.5 gap-4">
+    <span class="font-bold text-slate-900 dark:text-white text-base">Project Manager</span>
+    <span class="text-base text-muted">Consejo Electoral (2015 – 2016)</span>
+  </div>
+  <div class="grid grid-cols-[180px_1fr] items-center py-2.5 gap-4">
+    <span class="font-bold text-slate-900 dark:text-white text-base">Business Manager</span>
+    <span class="text-base text-muted">Comercial Ficetola (2012 – 2015)</span>
+  </div>
+</div>`,
+        icon: 'tabler:history',
       },
     ]}
-    classes={{ container: 'max-w-3xl' }}
   />
+  
 
   <!-- Steps Widget ****************** -->
 
   <Steps
-    id="resume"
+    id="education"
     title="Educación"
     items={[
       {
-        title: `Master of Fine Arts in Graphic Design <br /> <span class="font-normal">New York University's School of Design</span> <br /> <span class="text-sm font-normal">2018 - 2020</span>`,
+        title: `MBA con Especialidad en Transformación Digital <span class="ml-2 inline-flex items-center gap-1 text-xs font-semibold px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 dark:bg-emerald-950/40 dark:text-emerald-300 dark:border-emerald-800"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Titulado</span> <br /> <span class="font-normal inline-flex items-center gap-2 mt-1.5"><span class="w-11 h-11 rounded-lg bg-[#005596] border border-blue-900 shadow-xs inline-flex items-center justify-center p-1.5 text-white font-black text-sm tracking-tighter select-none">unir</span> UNIVERSIDAD DE LA RIOJA (UNIR), España</span> <br /> <span class="inline-block mt-2 px-3 py-0.5 text-sm font-bold rounded-full bg-slate-100 text-slate-800 dark:bg-slate-800 dark:text-slate-200 border border-slate-200 dark:border-slate-700">[ 2021 - 2022 ]</span>`,
+        description: `<ul class="list-disc list-inside space-y-1 mt-2 text-muted text-base">
+  <li>Gestión estratégica de innovación, liderazgo ágil y modelos de negocio digitales.</li>
+  <li>Tesis enfocada en optimización operativa mediante adopción tecnológica.</li>
+</ul>
+<div class="flex flex-wrap gap-2 mt-3 mb-2">
+  <span class="text-xs px-2.5 py-1 rounded-md font-semibold bg-blue-50 text-blue-900 border border-blue-200/90 dark:bg-blue-950/40 dark:text-blue-200 dark:border-blue-800">Transformación Digital</span>
+  <span class="text-xs px-2.5 py-1 rounded-md font-semibold bg-blue-50 text-blue-900 border border-blue-200/90 dark:bg-blue-950/40 dark:text-blue-200 dark:border-blue-800">Gestión TI</span>
+  <span class="text-xs px-2.5 py-1 rounded-md font-semibold bg-blue-50 text-blue-900 border border-blue-200/90 dark:bg-blue-950/40 dark:text-blue-200 dark:border-blue-800">Estrategia Ágil</span>
+</div>`,
         icon: 'tabler:school',
       },
       {
-        title: `Bachelor of Arts in Graphic Design <br /> <span class="font-normal">New York University's School of Design</span> <br /> <span class="text-sm font-normal">2014 - 2018</span>`,
+        title: `Ingeniero en Sistemas Computacionales <span class="ml-2 inline-flex items-center gap-1 text-xs font-semibold px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 dark:bg-emerald-950/40 dark:text-emerald-300 dark:border-emerald-800"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Grado Superior</span> <br /> <span class="font-normal inline-flex items-center gap-2 mt-1.5"><span class="w-11 h-11 rounded-lg bg-[#002855] border border-slate-800 shadow-xs inline-flex items-center justify-center p-1.5 text-white font-extrabold text-sm tracking-wider select-none">UG</span> UNIVERSIDAD DE GUAYAQUIL (UG), Ecuador</span> <br /> <span class="inline-block mt-2 px-3 py-0.5 text-sm font-bold rounded-full bg-slate-100 text-slate-800 dark:bg-slate-800 dark:text-slate-200 border border-slate-200 dark:border-slate-700">[ 2010 - 2016 ]</span>`,
+        description: `<ul class="list-disc list-inside space-y-1 mt-2 text-muted text-base">
+  <li>Fundamentos de ingeniería de software, estructuras de datos, redes e infraestructura corporativa.</li>
+  <li>Diseño y modelado de bases de datos relacionales y aplicaciones cliente-servidor.</li>
+</ul>
+<div class="flex flex-wrap gap-2 mt-3 mb-2">
+  <span class="text-xs px-2.5 py-1 rounded-md font-semibold bg-blue-50 text-blue-900 border border-blue-200/90 dark:bg-blue-950/40 dark:text-blue-200 dark:border-blue-800">Ingeniería de Software</span>
+  <span class="text-xs px-2.5 py-1 rounded-md font-semibold bg-blue-50 text-blue-900 border border-blue-200/90 dark:bg-blue-950/40 dark:text-blue-200 dark:border-blue-800">Sistemas & Redes</span>
+  <span class="text-xs px-2.5 py-1 rounded-md font-semibold bg-blue-50 text-blue-900 border border-blue-200/90 dark:bg-blue-950/40 dark:text-blue-200 dark:border-blue-800">Bases de Datos</span>
+</div>`,
         icon: 'tabler:school',
+      },
+      {
+        title: `Bachiller en Comercio y Administración <span class="ml-2 inline-flex items-center gap-1 text-xs font-semibold px-2 py-0.5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 dark:bg-emerald-950/40 dark:text-emerald-300 dark:border-emerald-800"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Graduado</span> <br /> <span class="font-normal inline-flex items-center gap-2 mt-1.5"><span class="w-11 h-11 rounded-lg bg-[#b91c1c] border border-red-900 shadow-xs inline-flex items-center justify-center p-1.5 text-white font-extrabold text-sm tracking-wider select-none">VR</span> Especializado en Informática — COL. "VICENTE ROCAFUERTE", Ecuador</span> <br /> <span class="inline-block mt-2 px-3 py-0.5 text-sm font-bold rounded-full bg-slate-100 text-slate-800 dark:bg-slate-800 dark:text-slate-200 border border-slate-200 dark:border-slate-700">[ 2001 - 2006 ]</span>`,
+        description: `<ul class="list-disc list-inside space-y-1 mt-2 text-muted text-base">
+  <li>Formación técnica en computación comercial, soporte de sistemas y gestión administrativa.</li>
+</ul>
+<div class="flex flex-wrap gap-2 mt-3 mb-2">
+  <span class="text-xs px-2.5 py-1 rounded-md font-semibold bg-blue-50 text-blue-900 border border-blue-200/90 dark:bg-blue-950/40 dark:text-blue-200 dark:border-blue-800">Informática Básica</span>
+  <span class="text-xs px-2.5 py-1 rounded-md font-semibold bg-blue-50 text-blue-900 border border-blue-200/90 dark:bg-blue-950/40 dark:text-blue-200 dark:border-blue-800">Administración</span>
+</div>`,
+        icon: 'tabler:certificate',
       },
     ]}
     classes={{ container: 'max-w-3xl' }}
   />
 
-  <!-- Features3 Widget ************** -->
+<!-- Certificaciones e Insignias Widget ****************** -->
 
-  <Features3
-    title="Skills"
-    subtitle="Discover the proficiencies that allow me to bring imagination to life through design."
-    columns={3}
-    defaultIcon="tabler:point-filled"
+  <Steps
+    id="certifications"
+    title="Certificaciones e Insignias"
+    subtitle="Credenciales oficiales y acreditaciones internacionales validadas en plataformas globales."
     items={[
       {
-        title: 'Graphic design',
-        description: 'Proficient in crafting visually appealing designs that convey messages effectively.',
+        title: `<div class="flex items-center gap-3 flex-wrap pb-1">
+          <span class="font-bold text-base sm:text-lg text-gray-900 dark:text-white leading-snug">Microsoft Certified: Azure Fundamentals (AZ-900)</span>
+          <span class="shrink-0 inline-flex items-center gap-1.5 text-[11px] font-semibold px-2.5 py-0.5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 dark:bg-emerald-950/50 dark:text-emerald-300 dark:border-emerald-800">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Verificado
+          </span>
+        </div>
+        <div class="flex items-center gap-3 mt-2.5 flex-wrap">
+          <div class="w-12 h-12 min-w-[48px] min-h-[48px] shrink-0 rounded-xl bg-[#0078D4] border border-blue-600 flex items-center justify-center text-white font-black text-sm tracking-tight shadow-md select-none">MS</div>
+          <span class="text-xs sm:text-sm font-semibold text-slate-700 dark:text-slate-300">MICROSOFT</span>
+          <span class="text-xs font-semibold px-2.5 py-1 rounded-md bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300 border border-slate-200 dark:border-slate-700">2026</span>
+        </div>`,
+        description: `<div class="pb-6">
+  <p class="mt-2.5 text-muted text-sm leading-relaxed">
+    Validación de conceptos fundamentales de computación en la nube, modelos de servicio, arquitectura global de Azure, seguridad, gobernanza y administración de costos.
+  </p>
+  <div class="flex flex-wrap gap-1.5 mt-2.5">
+    <span class="text-[11px] font-medium px-2.5 py-0.5 rounded bg-blue-50 text-blue-700 dark:bg-blue-950/60 dark:text-blue-300">Azure Cloud</span>
+    <span class="text-[11px] font-medium px-2.5 py-0.5 rounded bg-blue-50 text-blue-700 dark:bg-blue-950/60 dark:text-blue-300">Cloud Architecture</span>
+    <span class="text-[11px] font-medium px-2.5 py-0.5 rounded bg-blue-50 text-blue-700 dark:bg-blue-950/60 dark:text-blue-300">Security & Governance</span>
+  </div>
+  <div class="mt-3.5">
+    <a href="https://learn.microsoft.com/en-us/users/kevinfalcones-8768/credentials/e82dd4efa4259e0f" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-xs font-semibold px-3.5 py-1.5 rounded-lg bg-white dark:bg-slate-800 text-slate-800 dark:text-slate-200 border border-slate-300 dark:border-slate-700 hover:border-blue-500 hover:text-blue-600 dark:hover:text-blue-400 transition-all shadow-xs">
+      <span>Verificar en Microsoft Learn</span>
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 text-blue-500" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" fill="none"><path d="M17 7l-10 10"/><path d="M8 7l9 0l0 9"/></svg>
+    </a>
+  </div>
+</div>`,
+        icon: 'tabler:brand-azure',
       },
       {
-        title: 'Branding and identity',
-        description: 'Skilled at developing cohesive brand identities, including logos and brand guidelines.',
+        title: `<div class="flex items-center gap-3 flex-wrap pb-1">
+          <span class="font-bold text-base sm:text-lg text-gray-900 dark:text-white leading-snug">Oracle Cloud Infrastructure Foundations Associate (OCI-F)</span>
+          <span class="shrink-0 inline-flex items-center gap-1.5 text-[11px] font-semibold px-2.5 py-0.5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 dark:bg-emerald-950/50 dark:text-emerald-300 dark:border-emerald-800">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Verificado
+          </span>
+        </div>
+        <div class="flex items-center gap-3 mt-2.5 flex-wrap">
+          <div class="w-12 h-12 min-w-[48px] min-h-[48px] shrink-0 rounded-xl bg-[#C74634] border border-red-900 flex items-center justify-center text-white font-black text-sm tracking-tight shadow-md select-none">OCI</div>
+          <span class="text-xs sm:text-sm font-semibold text-slate-700 dark:text-slate-300">ORACLE UNIVERSITY</span>
+          <span class="text-xs font-semibold px-2.5 py-1 rounded-md bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300 border border-slate-200 dark:border-slate-700">2022</span>
+        </div>`,
+        description: `<div class="pb-6">
+  <p class="mt-2.5 text-muted text-sm leading-relaxed">
+    Arquitectura fundamental en la nube de Oracle, redes virtuales en la nube (VCN), almacenamiento de objetos, cómputo y gobernanza de seguridad.
+  </p>
+  <div class="flex flex-wrap gap-1.5 mt-2.5">
+    <span class="text-[11px] font-medium px-2.5 py-0.5 rounded bg-orange-50 text-orange-700 dark:bg-orange-950/60 dark:text-orange-300">Oracle Cloud (OCI)</span>
+    <span class="text-[11px] font-medium px-2.5 py-0.5 rounded bg-orange-50 text-orange-700 dark:bg-orange-950/60 dark:text-orange-300">VCN Networking</span>
+    <span class="text-[11px] font-medium px-2.5 py-0.5 rounded bg-orange-50 text-orange-700 dark:bg-orange-950/60 dark:text-orange-300">IAM & Security</span>
+  </div>
+  <div class="mt-3.5">
+    <a href="https://certview.oracle.com/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-xs font-semibold px-3.5 py-1.5 rounded-lg bg-white dark:bg-slate-800 text-slate-800 dark:text-slate-200 border border-slate-300 dark:border-slate-700 hover:border-orange-500 hover:text-orange-600 dark:hover:text-orange-400 transition-all shadow-xs">
+      <span>Verificar en Oracle CertView</span>
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 text-orange-500" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" fill="none"><path d="M17 7l-10 10"/><path d="M8 7l9 0l0 9"/></svg>
+    </a>
+  </div>
+</div>`,
+        icon: 'tabler:cloud-computing',
       },
       {
-        title: 'User-centered design',
-        description: 'Experienced in creating user-friendly interfaces and optimizing user experiences.',
+        title: `<div class="flex items-center gap-3 flex-wrap pb-1">
+          <span class="font-bold text-base sm:text-lg text-gray-900 dark:text-white leading-snug">Profesional Certificado en Ciencia de Datos (CPDS)</span>
+          <span class="shrink-0 inline-flex items-center gap-1.5 text-[11px] font-semibold px-2.5 py-0.5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 dark:bg-emerald-950/50 dark:text-emerald-300 dark:border-emerald-800">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Verificado
+          </span>
+        </div>
+        <div class="flex items-center gap-3 mt-2.5 flex-wrap">
+          <div class="w-12 h-12 min-w-[48px] min-h-[48px] shrink-0 rounded-xl bg-[#1e40af] border border-blue-900 flex items-center justify-center text-white font-black text-sm tracking-tight shadow-md select-none">SEE</div>
+          <span class="text-xs sm:text-sm font-semibold text-slate-700 dark:text-slate-300">SEE SOCIEDAD ESTADISTICA ECUATORIANA & ÉPICO</span>
+          <span class="text-xs font-semibold px-2.5 py-1 rounded-md bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300 border border-slate-200 dark:border-slate-700">2022</span>
+        </div>`,
+        description: `<div class="pb-6">
+  <p class="mt-2.5 text-muted text-sm leading-relaxed">
+    Modelado estadístico avanzado, análisis exploratorio, pipelines de datos (ETL) y visualización analítica para toma de decisiones.
+  </p>
+  <div class="flex flex-wrap gap-1.5 mt-2.5">
+    <span class="text-[11px] font-medium px-2.5 py-0.5 rounded bg-indigo-50 text-indigo-700 dark:bg-indigo-950/60 dark:text-indigo-300">Data Science</span>
+    <span class="text-[11px] font-medium px-2.5 py-0.5 rounded bg-indigo-50 text-indigo-700 dark:bg-indigo-950/60 dark:text-indigo-300">Data Pipelines</span>
+    <span class="text-[11px] font-medium px-2.5 py-0.5 rounded bg-indigo-50 text-indigo-700 dark:bg-indigo-950/60 dark:text-indigo-300">Estadística</span>
+  </div>
+  <div class="mt-3.5">
+    <a href="https://www.credly.com/badges/94777bdc-537b-45ba-8100-329ee862733a" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-xs font-semibold px-3.5 py-1.5 rounded-lg bg-white dark:bg-slate-800 text-slate-800 dark:text-slate-200 border border-slate-300 dark:border-slate-700 hover:border-indigo-500 hover:text-indigo-600 dark:hover:text-indigo-400 transition-all shadow-xs">
+      <span>Verificar Insignia en Credly</span>
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 text-indigo-500" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" fill="none"><path d="M17 7l-10 10"/><path d="M8 7l9 0l0 9"/></svg>
+    </a>
+  </div>
+</div>`,
+        icon: 'tabler:chart-histogram',
       },
       {
-        title: 'Adobe Creative Suite',
-        description: 'Skilled in using Photoshop, Illustrator, and InDesign to create and edit visual elements.',
+        title: `<div class="flex items-center gap-3 flex-wrap pb-1">
+          <span class="font-bold text-base sm:text-lg text-gray-900 dark:text-white leading-snug">Profesional Certificado - Scrum Fundamentos (SFPC)</span>
+          <span class="shrink-0 inline-flex items-center gap-1.5 text-[11px] font-semibold px-2.5 py-0.5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 dark:bg-emerald-950/50 dark:text-emerald-300 dark:border-emerald-800">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Verificado
+          </span>
+        </div>
+        <div class="flex items-center gap-3 mt-2.5 flex-wrap">
+          <div class="w-12 h-12 min-w-[48px] min-h-[48px] shrink-0 rounded-xl bg-[#d97706] border border-amber-800 flex items-center justify-center text-white font-black text-sm tracking-tight shadow-md select-none">CP</div>
+          <span class="text-xs sm:text-sm font-semibold text-slate-700 dark:text-slate-300">CERTIPROF</span>
+          <span class="text-xs font-semibold px-2.5 py-1 rounded-md bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300 border border-slate-200 dark:border-slate-700">2020</span>
+        </div>`,
+        description: `<div class="pb-6">
+  <p class="mt-2.5 text-muted text-sm leading-relaxed">
+    Metodologías ágiles de trabajo, ceremonias de Scrum, roles (Scrum Master, Product Owner) y planificación de sprints orientados a valor continuo.
+  </p>
+  <div class="flex flex-wrap gap-1.5 mt-2.5">
+    <span class="text-[11px] font-medium px-2.5 py-0.5 rounded bg-amber-50 text-amber-700 dark:bg-amber-950/60 dark:text-amber-300">Scrum Master</span>
+    <span class="text-[11px] font-medium px-2.5 py-0.5 rounded bg-amber-50 text-amber-700 dark:bg-amber-950/60 dark:text-amber-300">Agile Frameworks</span>
+    <span class="text-[11px] font-medium px-2.5 py-0.5 rounded bg-amber-50 text-amber-700 dark:bg-amber-950/60 dark:text-amber-300">Sprints</span>
+  </div>
+  <div class="mt-3.5">
+    <a href="https://www.credly.com/badges/77e7acb5-d240-4adf-b9dc-c9a2b0d4953d" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-xs font-semibold px-3.5 py-1.5 rounded-lg bg-white dark:bg-slate-800 text-slate-800 dark:text-slate-200 border border-slate-300 dark:border-slate-700 hover:border-amber-500 hover:text-amber-600 dark:hover:text-amber-400 transition-all shadow-xs">
+      <span>Verificar Insignia en Credly</span>
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 text-amber-500" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" fill="none"><path d="M17 7l-10 10"/><path d="M8 7l9 0l0 9"/></svg>
+    </a>
+  </div>
+</div>`,
+        icon: 'tabler:award',
       },
       {
-        title: 'Typography',
-        description: 'Adept in selecting and manipulating typefaces to enhance design aesthetics.',
+        title: `<div class="flex items-center gap-3 flex-wrap pb-1">
+          <span class="font-bold text-base sm:text-lg text-gray-900 dark:text-white leading-snug">Profesional Certificado - DevOps Integración Continua (CP-DCB)</span>
+          <span class="shrink-0 inline-flex items-center gap-1.5 text-[11px] font-semibold px-2.5 py-0.5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 dark:bg-emerald-950/50 dark:text-emerald-300 dark:border-emerald-800">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Verificado
+          </span>
+        </div>
+        <div class="flex items-center gap-3 mt-2.5 flex-wrap">
+          <div class="w-12 h-12 min-w-[48px] min-h-[48px] shrink-0 rounded-xl bg-slate-900 border border-slate-700 flex items-center justify-center text-white font-black text-sm tracking-tight shadow-md select-none">ATA</div>
+          <span class="text-xs sm:text-sm font-semibold text-slate-700 dark:text-slate-300">AGILE TESTING ALLIANCE & DEVOPS++ ALLIANCE</span>
+          <span class="text-xs font-semibold px-2.5 py-1 rounded-md bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300 border border-slate-200 dark:border-slate-700">2019</span>
+        </div>`,
+        description: `<div class="pb-6">
+  <p class="mt-2.5 text-muted text-sm leading-relaxed">
+    Dominio práctico de pipelines de CI/CD, automatización de compilación de código, empaquetado, contenedores y control continuo de calidad.
+  </p>
+  <div class="flex flex-wrap gap-1.5 mt-2.5">
+    <span class="text-[11px] font-medium px-2.5 py-0.5 rounded bg-blue-50 text-blue-700 dark:bg-blue-950/60 dark:text-blue-300">CI/CD Pipelines</span>
+    <span class="text-[11px] font-medium px-2.5 py-0.5 rounded bg-blue-50 text-blue-700 dark:bg-blue-950/60 dark:text-blue-300">Automatización</span>
+    <span class="text-[11px] font-medium px-2.5 py-0.5 rounded bg-blue-50 text-blue-700 dark:bg-blue-950/60 dark:text-blue-300">Docker</span>
+  </div>
+  <div class="mt-3.5">
+    <a href="https://www.credential.net/49ec5807-4ac8-4173-81b0-9b37803328eb" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-xs font-semibold px-3.5 py-1.5 rounded-lg bg-white dark:bg-slate-800 text-slate-800 dark:text-slate-200 border border-slate-300 dark:border-slate-700 hover:border-blue-500 hover:text-blue-600 dark:hover:text-blue-400 transition-all shadow-xs">
+      <span>Verificar Credencial Oficial</span>
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 text-blue-500" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" fill="none"><path d="M17 7l-10 10"/><path d="M8 7l9 0l0 9"/></svg>
+    </a>
+  </div>
+</div>`,
+        icon: 'tabler:git-branch',
       },
       {
-        title: 'Color theory',
-        description: 'Proficient in using color to evoke emotions and enhance visual harmony.',
-      },
-      {
-        title: 'Print and digital design',
-        description: 'Knowledgeable in designing for both print materials and digital platforms.',
-      },
-      {
-        title: 'Attention to detail',
-        description: 'Diligent in maintaining precision and quality in all design work.',
-      },
-      {
-        title: 'Adaptability',
-        description: 'Quick to adapt to new design trends, technologies, and client preferences.',
+        title: `<div class="flex items-center gap-3 flex-wrap pb-1">
+          <span class="font-bold text-base sm:text-lg text-gray-900 dark:text-white leading-snug">Profesional Certificado - DevOps Fundamentos (CP-DOF)</span>
+          <span class="shrink-0 inline-flex items-center gap-1.5 text-[11px] font-semibold px-2.5 py-0.5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 dark:bg-emerald-950/50 dark:text-emerald-300 dark:border-emerald-800">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span> Verificado
+          </span>
+        </div>
+        <div class="flex items-center gap-3 mt-2.5 flex-wrap">
+          <div class="w-12 h-12 min-w-[48px] min-h-[48px] shrink-0 rounded-xl bg-slate-900 border border-slate-700 flex items-center justify-center text-white font-black text-sm tracking-tight shadow-md select-none">ATA</div>
+          <span class="text-xs sm:text-sm font-semibold text-slate-700 dark:text-slate-300">AGILE TESTING ALLIANCE & DEVOPS++ ALLIANCE</span>
+          <span class="text-xs font-semibold px-2.5 py-1 rounded-md bg-slate-100 text-slate-700 dark:bg-slate-800 dark:text-slate-300 border border-slate-200 dark:border-slate-700">2019</span>
+        </div>`,
+        description: `<div class="pb-6">
+  <p class="mt-2.5 text-muted text-sm leading-relaxed">
+    Fundamentos culturales de DevOps, integración ágil entre desarrollo y operaciones, principios CALMS, entrega de valor y automatización.
+  </p>
+  <div class="flex flex-wrap gap-1.5 mt-2.5">
+    <span class="text-[11px] font-medium px-2.5 py-0.5 rounded bg-blue-50 text-blue-700 dark:bg-blue-950/60 dark:text-blue-300">Cultura DevOps</span>
+    <span class="text-[11px] font-medium px-2.5 py-0.5 rounded bg-blue-50 text-blue-700 dark:bg-blue-950/60 dark:text-blue-300">CALMS</span>
+    <span class="text-[11px] font-medium px-2.5 py-0.5 rounded bg-blue-50 text-blue-700 dark:bg-blue-950/60 dark:text-blue-300">SRE</span>
+  </div>
+  <div class="mt-3.5">
+    <a href="https://www.credential.net/d7e3125d-6d60-464c-bc84-5da044fec5ee#gs.b0z1ib" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-xs font-semibold px-3.5 py-1.5 rounded-lg bg-white dark:bg-slate-800 text-slate-800 dark:text-slate-200 border border-slate-300 dark:border-slate-700 hover:border-blue-500 hover:text-blue-600 dark:hover:text-blue-400 transition-all shadow-xs">
+      <span>Verificar Credencial Oficial</span>
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 text-blue-500" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" fill="none"><path d="M17 7l-10 10"/><path d="M8 7l9 0l0 9"/></svg>
+    </a>
+  </div>
+</div>`,
+        icon: 'tabler:certificate',
       },
     ]}
+    classes={{ container: 'max-w-3xl' }}
   />
 
-  <!-- Content Widget **************** -->
+
+<!-- Cursos y Formación Continua (Alineación Perfecta 4x4) ****************** -->
+
+  <section id="courses" class="py-12 md:py-16 max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="mb-10 text-center max-w-3xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-gray-900 dark:text-white mb-3">
+        Cursos y Formación Continua
+      </h2>
+      <p class="text-muted text-sm md:text-base">
+        Especializaciones técnicas y formación continua clasificada por áreas de especialidad.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
+
+      <!-- 1. DevOps & Cloud -->
+      <div class="flex flex-col justify-between p-6 sm:p-7 rounded-2xl border border-slate-200/80 dark:border-slate-800 bg-white/60 dark:bg-slate-900/60 shadow-xs hover:border-sky-400/50 hover:shadow-md transition-all duration-200">
+        <div>
+          <div class="flex items-center gap-3.5 mb-5">
+            <div class="w-10 h-10 rounded-xl bg-sky-50 dark:bg-sky-950/60 text-sky-600 dark:text-sky-400 border border-sky-200/60 dark:border-sky-800/60 flex items-center justify-center shrink-0">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"><path d="M6.657 18c-2.572 0 -4.657 -2.007 -4.657 -4.483c0 -2.475 2.085 -4.482 4.657 -4.482c.393 -1.762 1.794 -3.2 3.675 -3.708c2.113 -.57 4.378 .345 5.347 2.19c.478 -.16 1.002 -.244 1.545 -.244c3.038 0 5.501 2.378 5.501 5.31c0 2.933 -2.463 5.311 -5.501 5.311l-10.567 .116z"/></svg>
+            </div>
+            <div>
+              <h3 class="font-bold text-base sm:text-lg text-gray-900 dark:text-white leading-snug">DevOps & Cloud</h3>
+              <p class="text-xs text-muted">Infraestructura, contenedores y automatización</p>
+            </div>
+          </div>
+
+          <div class="space-y-2.5">
+            <div class="flex items-center justify-between gap-3 p-3 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-100 dark:border-slate-800">
+              <span class="text-xs font-semibold text-slate-800 dark:text-slate-200 truncate">Azure Fundamentals (AZ-900)</span>
+              <span class="text-[11px] font-bold w-28 sm:w-32 py-1 text-center rounded-lg bg-sky-50 text-sky-700 dark:bg-sky-950/70 dark:text-sky-300 border border-sky-200/60 dark:border-sky-800 shrink-0">Microsoft</span>
+            </div>
+            <div class="flex items-center justify-between gap-3 p-3 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-100 dark:border-slate-800">
+              <span class="text-xs font-semibold text-slate-800 dark:text-slate-200 truncate">Fundamentos DevOps</span>
+              <span class="text-[11px] font-bold w-28 sm:w-32 py-1 text-center rounded-lg bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 shrink-0">Maint</span>
+            </div>
+            <div class="flex items-center justify-between gap-3 p-3 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-100 dark:border-slate-800">
+              <span class="text-xs font-semibold text-slate-800 dark:text-slate-200 truncate">Cloud Computing</span>
+              <span class="text-[11px] font-bold w-28 sm:w-32 py-1 text-center rounded-lg bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 shrink-0">Escuela (EOI)</span>
+            </div>
+            <div class="flex items-center justify-between gap-3 p-3 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-100 dark:border-slate-800">
+              <span class="text-xs font-semibold text-slate-800 dark:text-slate-200 truncate">Docker & Contenedores</span>
+              <span class="text-[11px] font-bold w-28 sm:w-32 py-1 text-center rounded-lg bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 shrink-0">LinkedIn</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. Calidad & Testing (QA) -->
+      <div class="flex flex-col justify-between p-6 sm:p-7 rounded-2xl border border-slate-200/80 dark:border-slate-800 bg-white/60 dark:bg-slate-900/60 shadow-xs hover:border-teal-400/50 hover:shadow-md transition-all duration-200">
+        <div>
+          <div class="flex items-center gap-3.5 mb-5">
+            <div class="w-10 h-10 rounded-xl bg-teal-50 dark:bg-teal-950/60 text-teal-600 dark:text-teal-400 border border-teal-200/60 dark:border-teal-800/60 flex items-center justify-center shrink-0">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"><path d="M9 5h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2h-2"/><rect x="9" y="3" width="6" height="4" rx="2"/><path d="M9 14l2 2l4 -4"/></svg>
+            </div>
+            <div>
+              <h3 class="font-bold text-base sm:text-lg text-gray-900 dark:text-white leading-snug">Calidad & Testing (QA)</h3>
+              <p class="text-xs text-muted">Estándares, cobertura y automatización</p>
+            </div>
+          </div>
+
+          <div class="space-y-2.5">
+            <div class="flex items-center justify-between gap-3 p-3 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-100 dark:border-slate-800">
+              <span class="text-xs font-semibold text-slate-800 dark:text-slate-200 truncate">ISTQB Estándar de Calidad</span>
+              <span class="text-[11px] font-bold w-28 sm:w-32 py-1 text-center rounded-lg bg-teal-50 text-teal-700 dark:bg-teal-950/70 dark:text-teal-300 border border-teal-200/60 dark:border-teal-800 shrink-0">Maint</span>
+            </div>
+            <div class="flex items-center justify-between gap-3 p-3 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-100 dark:border-slate-800">
+              <span class="text-xs font-semibold text-slate-800 dark:text-slate-200 truncate">Selenium Automatización</span>
+              <span class="text-[11px] font-bold w-28 sm:w-32 py-1 text-center rounded-lg bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 shrink-0">LinkedIn</span>
+            </div>
+            <div class="flex items-center justify-between gap-3 p-3 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-100 dark:border-slate-800">
+              <span class="text-xs font-semibold text-slate-800 dark:text-slate-200 truncate">Pruebas BDD y TDD</span>
+              <span class="text-[11px] font-bold w-28 sm:w-32 py-1 text-center rounded-lg bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 shrink-0">Xeridia</span>
+            </div>
+            <div class="flex items-center justify-between gap-3 p-3 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-100 dark:border-slate-800">
+              <span class="text-xs font-semibold text-slate-800 dark:text-slate-200 truncate">Transformación Digital QA</span>
+              <span class="text-[11px] font-bold w-28 sm:w-32 py-1 text-center rounded-lg bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 shrink-0">Maint</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. Metodologías Ágiles (Agile) -->
+      <div class="flex flex-col justify-between p-6 sm:p-7 rounded-2xl border border-slate-200/80 dark:border-slate-800 bg-white/60 dark:bg-slate-900/60 shadow-xs hover:border-amber-400/50 hover:shadow-md transition-all duration-200">
+        <div>
+          <div class="flex items-center gap-3.5 mb-5">
+            <div class="w-10 h-10 rounded-xl bg-amber-50 dark:bg-amber-950/60 text-amber-600 dark:text-amber-400 border border-amber-200/60 dark:border-amber-800/60 flex items-center justify-center shrink-0">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"><circle cx="9" cy="7" r="4"/><path d="M3 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/><path d="M21 21v-2a4 4 0 0 0 -3 -3.85"/></svg>
+            </div>
+            <div>
+              <h3 class="font-bold text-base sm:text-lg text-gray-900 dark:text-white leading-snug">Metodologías Ágiles (Agile)</h3>
+              <p class="text-xs text-muted">Gestión ágil de proyectos y marcos de trabajo</p>
+            </div>
+          </div>
+
+          <div class="space-y-2.5">
+            <div class="flex items-center justify-between gap-3 p-3 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-100 dark:border-slate-800">
+              <span class="text-xs font-semibold text-slate-800 dark:text-slate-200 truncate">Transformación Digital</span>
+              <span class="text-[11px] font-bold w-28 sm:w-32 py-1 text-center rounded-lg bg-amber-50 text-amber-700 dark:bg-amber-950/70 dark:text-amber-300 border border-amber-200/60 dark:border-amber-800 shrink-0">PMI</span>
+            </div>
+            <div class="flex items-center justify-between gap-3 p-3 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-100 dark:border-slate-800">
+              <span class="text-xs font-semibold text-slate-800 dark:text-slate-200 truncate">Fundamentos Lean</span>
+              <span class="text-[11px] font-bold w-28 sm:w-32 py-1 text-center rounded-lg bg-amber-50 text-amber-700 dark:bg-amber-950/70 dark:text-amber-300 border border-amber-200/60 dark:border-amber-800 shrink-0">PMI</span>
+            </div>
+            <div class="flex items-center justify-between gap-3 p-3 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-100 dark:border-slate-800">
+              <span class="text-xs font-semibold text-slate-800 dark:text-slate-200 truncate">Scrum Roles</span>
+              <span class="text-[11px] font-bold w-28 sm:w-32 py-1 text-center rounded-lg bg-amber-50 text-amber-700 dark:bg-amber-950/70 dark:text-amber-300 border border-amber-200/60 dark:border-amber-800 shrink-0">PMI</span>
+            </div>
+            <div class="flex items-center justify-between gap-3 p-3 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-100 dark:border-slate-800">
+              <span class="text-xs font-semibold text-slate-800 dark:text-slate-200 truncate">Gestión de Entregables Ágiles</span>
+              <span class="text-[11px] font-bold w-28 sm:w-32 py-1 text-center rounded-lg bg-amber-50 text-amber-700 dark:bg-amber-950/70 dark:text-amber-300 border border-amber-200/60 dark:border-amber-800 shrink-0">PMI</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4. Desarrollo & Software (Dev) -->
+      <div class="flex flex-col justify-between p-6 sm:p-7 rounded-2xl border border-slate-200/80 dark:border-slate-800 bg-white/60 dark:bg-slate-900/60 shadow-xs hover:border-indigo-400/50 hover:shadow-md transition-all duration-200">
+        <div>
+          <div class="flex items-center gap-3.5 mb-5">
+            <div class="w-10 h-10 rounded-xl bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-400 border border-indigo-200/60 dark:border-indigo-800/60 flex items-center justify-center shrink-0">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"><path d="M7 8l-4 4l4 4"/><path d="M17 8l4 4l-4 4"/><path d="M14 4l-4 16"/></svg>
+            </div>
+            <div>
+              <h3 class="font-bold text-base sm:text-lg text-gray-900 dark:text-white leading-snug">Desarrollo & Software (Dev)</h3>
+              <p class="text-xs text-muted">Bases de datos, scripting y desarrollo web/móvil</p>
+            </div>
+          </div>
+
+          <div class="space-y-2.5">
+            <div class="flex items-center justify-between gap-3 p-3 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-100 dark:border-slate-800">
+              <span class="text-xs font-semibold text-slate-800 dark:text-slate-200 truncate">PLSQL & Java</span>
+              <span class="text-[11px] font-bold w-28 sm:w-32 py-1 text-center rounded-lg bg-indigo-50 text-indigo-700 dark:bg-indigo-950/70 dark:text-indigo-300 border border-indigo-200/60 dark:border-indigo-800 shrink-0">Corlasosa</span>
+            </div>
+            <div class="flex items-center justify-between gap-3 p-3 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-100 dark:border-slate-800">
+              <span class="text-xs font-semibold text-slate-800 dark:text-slate-200 truncate">Linux & Bash Shell</span>
+              <span class="text-[11px] font-bold w-28 sm:w-32 py-1 text-center rounded-lg bg-indigo-50 text-indigo-700 dark:bg-indigo-950/70 dark:text-indigo-300 border border-indigo-200/60 dark:border-indigo-800 shrink-0">Corlasosa</span>
+            </div>
+            <div class="flex items-center justify-between gap-3 p-3 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-100 dark:border-slate-800">
+              <span class="text-xs font-semibold text-slate-800 dark:text-slate-200 truncate">Desarrollo de Apps Móviles</span>
+              <span class="text-[11px] font-bold w-28 sm:w-32 py-1 text-center rounded-lg bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 shrink-0">U. Madrid</span>
+            </div>
+            <div class="flex items-center justify-between gap-3 p-3 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-100 dark:border-slate-800">
+              <span class="text-xs font-semibold text-slate-800 dark:text-slate-200 truncate">Desarrollo Web 1 y 2</span>
+              <span class="text-[11px] font-bold w-28 sm:w-32 py-1 text-center rounded-lg bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 shrink-0">U. Madrid</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+
+
+ <!-- Habilidades Blandas & Idiomas Widget ****************** -->
+
+  <section class="py-8 md:py-12 max-w-6xl mx-auto px-4 sm:px-6">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 items-stretch">
+      
+      <!-- Habilidades Blandas -->
+      <div class="h-full flex flex-col justify-between p-6 sm:p-7 rounded-2xl border border-slate-200/80 dark:border-slate-800 bg-white/60 dark:bg-slate-900/60 shadow-xs hover:border-amber-500/40 hover:shadow-md transition-all duration-200">
+        <div>
+          <div class="flex items-center gap-3.5 mb-5">
+            <div class="w-10 h-10 min-w-[40px] min-h-[40px] rounded-xl bg-amber-50 dark:bg-amber-950/60 text-amber-600 dark:text-amber-400 border border-amber-200/50 dark:border-amber-800/60 flex items-center justify-center shadow-xs">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"><path d="M3 12h1m8 -9v1m8 8h1m-15.4 -6.4l.7 .7m12.1 -.7l-.7 .7"/><path d="M9 16a5 5 0 1 1 6 0a3.5 3.5 0 0 0 -1 3a2 2 0 0 1 -4 0a3.5 3.5 0 0 0 -1 -3"/><path d="M9.7 17l4.6 0"/></svg>
+            </div>
+            <div>
+              <h3 class="text-base sm:text-lg font-bold text-gray-900 dark:text-white leading-snug">Habilidades Blandas</h3>
+              <p class="text-xs text-muted">Liderazgo técnico y gestión colaborativa de ingeniería.</p>
+            </div>
+          </div>
+
+          <div class="space-y-3 mt-4">
+            <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200/60 dark:border-slate-700/60 flex items-start gap-3">
+              <div class="w-2 h-2 rounded-full bg-amber-500 mt-1.5 shrink-0"></div>
+              <div>
+                <span class="text-xs font-semibold text-slate-800 dark:text-slate-200 block">Liderazgo Técnico & Mentoring</span>
+                <p class="text-[11px] text-muted leading-relaxed mt-0.5">Dirección de células ágiles, onboarding de ingenieros y fomento de la cultura DevOps.</p>
+              </div>
+            </div>
+
+            <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200/60 dark:border-slate-700/60 flex items-start gap-3">
+              <div class="w-2 h-2 rounded-full bg-amber-500 mt-1.5 shrink-0"></div>
+              <div>
+                <span class="text-xs font-semibold text-slate-800 dark:text-slate-200 block">Gestión de Incidentes Críticos</span>
+                <p class="text-[11px] text-muted leading-relaxed mt-0.5">Resolución bajo presión, comunicación con stakeholders y análisis de causa raíz (RCA).</p>
+              </div>
+            </div>
+
+            <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200/60 dark:border-slate-700/60 flex items-start gap-3">
+              <div class="w-2 h-2 rounded-full bg-amber-500 mt-1.5 shrink-0"></div>
+              <div>
+                <span class="text-xs font-semibold text-slate-800 dark:text-slate-200 block">Trabajo en Equipo & Negociación</span>
+                <p class="text-[11px] text-muted leading-relaxed mt-0.5">Alineación estratégica entre áreas de Desarrollo, QA, Operaciones y Negocio.</p>
+              </div>
+            </div>
+
+            <div class="p-3 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200/60 dark:border-slate-700/60 flex items-start gap-3">
+              <div class="w-2 h-2 rounded-full bg-amber-500 mt-1.5 shrink-0"></div>
+              <div>
+                <span class="text-xs font-semibold text-slate-800 dark:text-slate-200 block">Planificación Ágil & Priorización</span>
+                <p class="text-[11px] text-muted leading-relaxed mt-0.5">Gestión de entregables continuos y optimización del Time-to-Market.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Idiomas / Inglés Profesional -->
+      <div class="h-full flex flex-col justify-between p-6 sm:p-7 rounded-2xl border border-slate-200/80 dark:border-slate-800 bg-white/60 dark:bg-slate-900/60 shadow-xs hover:border-blue-500/40 hover:shadow-md transition-all duration-200">
+        <div>
+          <div class="flex items-center justify-between gap-3 mb-5">
+            <div class="flex items-center gap-3.5">
+              <div class="w-10 h-10 min-w-[40px] min-h-[40px] rounded-xl bg-blue-50 dark:bg-blue-950/60 text-blue-600 dark:text-blue-400 border border-blue-200/50 dark:border-blue-800/60 flex items-center justify-center font-bold text-xs tracking-tight shadow-xs">
+                EN
+              </div>
+              <div>
+                <h3 class="text-base sm:text-lg font-bold text-gray-900 dark:text-white leading-snug">Inglés Técnico / Profesional</h3>
+                <p class="text-xs text-muted">Proyectos internacionales y equipos globales.</p>
+              </div>
+            </div>
+            <span class="inline-flex items-center text-xs font-bold px-3 py-1 rounded-full bg-blue-50 text-blue-700 dark:bg-blue-950/70 dark:text-blue-300 border border-blue-200 dark:border-blue-800 shrink-0">
+              Nivel B1 / B2
+            </span>
+          </div>
+
+          <div class="grid grid-cols-2 gap-3 mt-4">
+            <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200/60 dark:border-slate-700/60 text-center">
+              <span class="text-[11px] font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider block">Reading</span>
+              <span class="text-sm font-bold text-blue-600 dark:text-blue-400 mt-1 block">B2 • Avanzado</span>
+              <p class="text-[10px] text-muted mt-1">Manuales técnicos y RFCs</p>
+            </div>
+
+            <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200/60 dark:border-slate-700/60 text-center">
+              <span class="text-[11px] font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider block">Listening</span>
+              <span class="text-sm font-bold text-blue-600 dark:text-blue-400 mt-1 block">B1+ • Intermedio</span>
+              <p class="text-[10px] text-muted mt-1">Syncs técnicos y demos</p>
+            </div>
+
+            <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200/60 dark:border-slate-700/60 text-center">
+              <span class="text-[11px] font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider block">Writing</span>
+              <span class="text-sm font-bold text-blue-600 dark:text-blue-400 mt-1 block">B1 • Intermedio</span>
+              <p class="text-[10px] text-muted mt-1">Documentación y tickets</p>
+            </div>
+
+            <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-800/50 border border-slate-200/60 dark:border-slate-700/60 text-center">
+              <span class="text-[11px] font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider block">Speaking</span>
+              <span class="text-sm font-bold text-blue-600 dark:text-blue-400 mt-1 block">B1 • Conversacional</span>
+              <p class="text-[10px] text-muted mt-1">Daily standups y soporte</p>
+            </div>
+          </div>
+        </div>
+
+        <p class="text-[11px] text-muted text-center italic mt-4 pt-3 border-t border-slate-100 dark:border-slate-800">
+          Capacidad comprobada de interacción técnica fluida y documentación de software en entornos bilingües.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+
+<!-- Content Widget (Project 1 - DevSecOps) ****************** -->
 
   <Content
-    id="porfolio"
-    title="Elevating visual narratives"
-    subtitle="Embark on a design journey that surpasses pixels, entering a realm of imagination. Explore my portfolio, where passion and creativity converge to shape enthralling visual narratives."
+    id="projects"
+    title="Proyectos Destacados"
+    subtitle="Iniciativas clave de transformación digital, automatización de infraestructura y migración de sistemas a nivel empresarial."
     isReversed
     items={[
       {
-        title: 'Description:',
+        title: 'Alcance del Proyecto:',
         description:
-          'Developed a comprehensive brand identity for a tech startup, Tech Innovators, specializing in disruptive innovations. The goal was to convey a modern yet approachable image that resonated with both corporate clients and tech enthusiasts.',
+          'Automatización del pipeline de CI/CD para prácticamente el 100% de las aplicaciones en múltiples lenguajes de programación, estandarizando flujos de despliegue.',
+        icon: 'tabler:target-arrow',
+        classes: {
+          icon: 'w-7 h-7 p-1 rounded-lg bg-blue-50 dark:bg-blue-950/60 text-blue-600 dark:text-blue-400 border border-blue-200/50 dark:border-blue-800/60',
+        },
       },
       {
-        title: 'Role:',
+        title: 'Seguridad y Despliegue:',
         description:
-          'Led the entire branding process from concept to execution. Created a dynamic logo that symbolized innovation, selected a vibrant color palette, and I designed corporate stationery, website graphics, and social media assets.',
+          'Integración de análisis de seguridad estático/dinámico, pruebas automatizadas e Infraestructura como Código (IaC con Bicep y Terraform) para diversos esquemas de despliegue y bases de datos.',
+        icon: 'tabler:shield-check',
+        classes: {
+          icon: 'w-7 h-7 p-1 rounded-lg bg-emerald-50 dark:bg-emerald-950/60 text-emerald-600 dark:text-emerald-400 border border-emerald-200/50 dark:border-emerald-800/60',
+        },
+      },
+      {
+        title: 'Entorno Técnico:',
+        description: `<div class="mt-1 flex flex-wrap gap-1.5">
+          <span class="text-[11px] font-medium px-2 py-0.5 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200/70 dark:border-slate-700/70">Azure Cloud</span>
+          <span class="text-[11px] font-medium px-2 py-0.5 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200/70 dark:border-slate-700/70">AKS (Kubernetes)</span>
+          <span class="text-[11px] font-medium px-2 py-0.5 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200/70 dark:border-slate-700/70">Docker</span>
+          <span class="text-[11px] font-medium px-2 py-0.5 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200/70 dark:border-slate-700/70">SonarQube</span>
+          <span class="text-[11px] font-medium px-2 py-0.5 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200/70 dark:border-slate-700/70">Liquibase</span>
+          <span class="text-[11px] font-medium px-2 py-0.5 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200/70 dark:border-slate-700/70">Azure DevOps</span>
+          <span class="text-[11px] font-medium px-2 py-0.5 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200/70 dark:border-slate-700/70">Terraform & Bicep</span>
+        </div>`,
+        icon: 'tabler:cpu',
+        classes: {
+          icon: 'w-7 h-7 p-1 rounded-lg bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-400 border border-indigo-200/50 dark:border-indigo-800/60',
+        },
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1658248165252-71e116af1b34?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=928&q=80',
-      alt: 'Tech Design Image',
-    }}
-    callToAction={{
-      target: '_blank',
-      text: 'Go to the project',
-      icon: 'tabler:chevron-right',
-      href: '#',
+      src: 'https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?auto=format&fit=crop&w=800&q=80',
+      alt: 'DevSecOps e Infraestructura como Código',
+      class: 'rounded-2xl shadow-xl border border-slate-200/80 dark:border-slate-800/80 object-cover',
     }}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        Project 1: <br /><span class="text-2xl">Brand identity for tech innovators</span>
+      <div class="mb-3 flex items-center gap-2">
+        <span class="text-xs font-bold px-2.5 py-0.5 rounded-full bg-blue-50 text-blue-700 dark:bg-blue-950/60 dark:text-blue-300 border border-blue-200/60 dark:border-blue-800">
+          2022 – 2024
+        </span>
+        <span class="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-emerald-50 text-emerald-700 dark:bg-emerald-950/60 dark:text-emerald-300 border border-emerald-200/60 dark:border-emerald-800">
+          100% Automatizado
+        </span>
+      </div>
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-1">
+        Implementación DevSecOps + IaC
       </h3>
+      <p class="text-sm font-semibold text-muted">
+        Tienda Pago (México) — Sr. DevSecOps & SRE
+      </p>
     </Fragment>
-
     <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+      <div class="absolute inset-0 bg-blue-50/20 dark:bg-transparent pointer-events-none"></div>
     </Fragment>
   </Content>
 
-  <!-- Content Widget **************** -->
+  <!-- Content Widget (Project 2 - Banco del Pacífico) ****************** -->
+
+  <Content
+    isAfterContent
+    items={[
+      {
+        title: 'Alcance del Proyecto:',
+        description:
+          'Adopción integral de cultura y prácticas DevOps bajo marco de trabajo ágil enfocadas en la plataforma de Banca Web de alta concurrencia transaccional.',
+        icon: 'tabler:compass',
+        classes: {
+          icon: 'w-7 h-7 p-1 rounded-lg bg-blue-50 dark:bg-blue-950/60 text-blue-600 dark:text-blue-400 border border-blue-200/50 dark:border-blue-800/60',
+        },
+      },
+      {
+        title: 'Impacto en el Negocio:',
+        description:
+          'Agilización sustancial en los pases a producción y optimización notable del time-to-market con reducción drástica de fricción operativa y despliegues sin tiempo de inactividad.',
+        icon: 'tabler:trending-up',
+        classes: {
+          icon: 'w-7 h-7 p-1 rounded-lg bg-emerald-50 dark:bg-emerald-950/60 text-emerald-600 dark:text-emerald-400 border border-emerald-200/50 dark:border-emerald-800/60',
+        },
+      },
+      {
+        title: 'Entorno Técnico:',
+        description: `<div class="mt-1 flex flex-wrap gap-1.5">
+          <span class="text-[11px] font-medium px-2 py-0.5 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200/70 dark:border-slate-700/70">Pipelines CI/CD</span>
+          <span class="text-[11px] font-medium px-2 py-0.5 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200/70 dark:border-slate-700/70">Docker</span>
+          <span class="text-[11px] font-medium px-2 py-0.5 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200/70 dark:border-slate-700/70">AWS Cloud</span>
+          <span class="text-[11px] font-medium px-2 py-0.5 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200/70 dark:border-slate-700/70">Microservicios</span>
+          <span class="text-[11px] font-medium px-2 py-0.5 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200/70 dark:border-slate-700/70">Scrum / Agile</span>
+        </div>`,
+        icon: 'tabler:cpu',
+        classes: {
+          icon: 'w-7 h-7 p-1 rounded-lg bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-400 border border-indigo-200/50 dark:border-indigo-800/60',
+        },
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80',
+      alt: 'Transformación Digital Bancaria y Analítica',
+      class: 'rounded-2xl shadow-xl border border-slate-200/80 dark:border-slate-800/80 object-cover',
+    }}
+  >
+    <Fragment slot="content">
+      <div class="mb-3 flex items-center gap-2">
+        <span class="text-xs font-bold px-2.5 py-0.5 rounded-full bg-blue-50 text-blue-700 dark:bg-blue-950/60 dark:text-blue-300 border border-blue-200/60 dark:border-blue-800">
+          2019 – 2020
+        </span>
+        <span class="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-indigo-50 text-indigo-700 dark:bg-indigo-950/60 dark:text-indigo-300 border border-indigo-200/60 dark:border-indigo-800">
+          Banca Web Transaccional
+        </span>
+      </div>
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-1">
+        Transformación Digital
+      </h3>
+      <p class="text-sm font-semibold text-muted">
+        Banco del Pacífico — Arq. DevOps (Team "Impulsor")
+      </p>
+    </Fragment>
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50/20 dark:bg-transparent pointer-events-none"></div>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget (Project 3 - Claro / Huawei) ****************** -->
 
   <Content
     isReversed
-    isAfterContent={true}
+    isAfterContent
     items={[
       {
-        title: 'Description:',
+        title: 'Alcance del Proyecto:',
         description:
-          'Designed a captivating event poster for an art and music festival, "ArtWave Fusion," aiming to showcase the synergy between visual art and music genres.',
+          'Participación técnica en equipo multidisciplinario e internacional de habla inglesa para la migración de plataformas críticas de telefonía prepago.',
+        icon: 'tabler:world',
+        classes: {
+          icon: 'w-7 h-7 p-1 rounded-lg bg-blue-50 dark:bg-blue-950/60 text-blue-600 dark:text-blue-400 border border-blue-200/50 dark:border-blue-800/60',
+        },
       },
       {
-        title: 'Role:',
-        description: `Translated the festival's creative theme into a visually striking poster. Used bold typography, vibrant colors, and abstract elements to depict the fusion of art and music. Ensured the design captured the festival's vibrant atmosphere.`,
+        title: 'Responsabilidades Clave:',
+        description:
+          'Definición de arquitectura tecnológica, extracción y transformación masiva de datos (ETL), y monitoreo de infraestructura corporativa y bases de datos.',
+        icon: 'tabler:database-cog',
+        classes: {
+          icon: 'w-7 h-7 p-1 rounded-lg bg-emerald-50 dark:bg-emerald-950/60 text-emerald-600 dark:text-emerald-400 border border-emerald-200/50 dark:border-emerald-800/60',
+        },
+      },
+      {
+        title: 'Entorno Técnico:',
+        description: `<div class="mt-1 flex flex-wrap gap-1.5">
+          <span class="text-[11px] font-medium px-2 py-0.5 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200/70 dark:border-slate-700/70">Linux (RHEL)</span>
+          <span class="text-[11px] font-medium px-2 py-0.5 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200/70 dark:border-slate-700/70">Scripting (Shell / AWK)</span>
+          <span class="text-[11px] font-medium px-2 py-0.5 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200/70 dark:border-slate-700/70">Huawei Core</span>
+          <span class="text-[11px] font-medium px-2 py-0.5 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200/70 dark:border-slate-700/70">Oracle DB</span>
+          <span class="text-[11px] font-medium px-2 py-0.5 rounded-md bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200/70 dark:border-slate-700/70">Middleware & WebLogic</span>
+        </div>`,
+        icon: 'tabler:cpu',
+        classes: {
+          icon: 'w-7 h-7 p-1 rounded-lg bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-400 border border-indigo-200/50 dark:border-indigo-800/60',
+        },
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1619983081563-430f63602796?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
-      alt: 'Art and Music Poster Image',
-    }}
-    callToAction={{
-      target: '_blank',
-      text: 'Go to the project',
-      icon: 'tabler:chevron-right',
-      href: '#',
+      src: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80',
+      alt: 'Servidores Data Center y Migración de Red',
+      class: 'rounded-2xl shadow-xl border border-slate-200/80 dark:border-slate-800/80 object-cover',
     }}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        Project 2: <br /><span class="text-2xl">Event poster for art & music festival</span>
+      <div class="mb-3 flex items-center gap-2">
+        <span class="text-xs font-bold px-2.5 py-0.5 rounded-full bg-blue-50 text-blue-700 dark:bg-blue-950/60 dark:text-blue-300 border border-blue-200/60 dark:border-blue-800">
+          2017 – 2018
+        </span>
+        <span class="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-teal-50 text-teal-700 dark:bg-teal-950/60 dark:text-teal-300 border border-teal-200/60 dark:border-teal-800">
+          Telecom Core Migration
+        </span>
+      </div>
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-1">
+        Migración de Prepago a CRM Huawei
       </h3>
+      <p class="text-sm font-semibold text-muted">
+        Telefónica Claro — Dev & Ops (Team "5000")
+      </p>
     </Fragment>
-
     <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+      <div class="absolute inset-0 bg-blue-50/20 dark:bg-transparent pointer-events-none"></div>
     </Fragment>
   </Content>
 
-  <!-- Content Widget **************** -->
+  
 
-  <Content
-    isReversed
-    isAfterContent={true}
-    items={[
-      {
-        title: 'Description:',
-        description: `Redesigned the e-commerce website for an eco-conscious fashion brand, GreenVogue. The objective was to align the brand's online presence with its sustainable ethos and improve user experience.`,
-      },
-      {
-        title: 'Role:',
-        description: `Conducted a thorough analysis of the brand's values and customer base to inform the design direction. Created a visually appealing interface with intuitive navigation, highlighting sustainable materials, and integrating a user-friendly shopping experience.`,
-      },
-    ]}
-    image={{
-      src: 'https://plus.unsplash.com/premium_photo-1683288295841-782fa47e4770?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80',
-      alt: 'Fashion e-commerce Image',
-    }}
-    callToAction={{
-      target: '_blank',
-      text: 'Go to the project',
-      icon: 'tabler:chevron-right',
-      href: '#',
-    }}
-  >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
-        Project 3: <br /><span class="text-2xl">E-commerce website redesign for fashion brand</span>
-      </h3>
-    </Fragment>
 
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content>
-
-  <!-- Testimonials Widget *********** -->
+  <!-- Testimonials Widget (Referencias Profesionales) ****************** -->
 
   <Testimonials
-    title="Client testimonials"
-    subtitle="Discover what clients have to say about their experiences working with me."
+  id="references"
+    title="Referencias Profesionales"
+    subtitle="Líderes técnicos y gerentes de ingeniería que respaldan mi trayectoria y desempeño profesional."
     testimonials={[
       {
-        testimonial: `She took our vague concept and turned it into a visual masterpiece that perfectly aligned with our goals. Her attention to detail and ability to translate ideas into compelling visuals exceeded our expectations.`,
-        name: 'Mark Thompson',
-        job: 'Creative director',
+        testimonial: `Kevin demostró un liderazgo técnico sobresaliente en la adopción de DevSecOps e infraestructura como código para casi la totalidad de nuestras aplicaciones, asegurando altos estándares de calidad y despliegues confiables en la nube.`,
+        name: 'Ing. David Sabo',
+        job: 'Chief Technology Officer (CTO) — Tienda Pago (EE.UU. / México)',
         image: {
-          src: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
-          alt: 'Mark Thompson Image',
+          src: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=300&q=80',
+          alt: 'Ing. David Sabo',
         },
       },
       {
-        testimonial: `She transformed our brand identity with her creative finesse, capturing our essence in every element. Her dedication and talent truly shine through her work.`,
-        name: 'Emily Martinez',
-        job: 'CEO',
+        testimonial: `Pieza fundamental en el equipo 'Impulsor' durante la transformación digital de Banca Web. Su visión sobre pipelines de integración continua y soporte en arquitecturas cloud agilizó notablemente nuestros pases a producción.`,
+        name: 'Ing. Patricio Gómez, MSc.',
+        job: 'Subgerente de Tecnología — Banco del Pacífico',
         image: {
-          src: 'https://images.unsplash.com/photo-1554151228-14d9def656e4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=772&q=80',
-          alt: 'Emily Martinez Image',
+          src: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80',
+          alt: 'Ing. Patricio Gómez',
         },
       },
       {
-        testimonial: `She has an uncanny ability to communicate emotions and stories. She crafted a logo for our NGO that not only represents our cause but also evokes empathy. Her professionalism and commitment make her a designer of exceptional caliber.`,
-        name: 'Laura Simmons',
-        job: 'Founder of an NGO',
+        testimonial: `Excelente rigor técnico y compromiso operativo en la gestión de incidentes críticos, scripting avanzado y administración de capas Middleware y bases de datos para plataformas de telecomunicaciones de alta demanda.`,
+        name: 'Ing. Víctor Soria, MSI.',
+        job: 'Gerente de Producción Sistemas — Telefónica Claro Ecuador',
         image: {
-          src: 'https://images.unsplash.com/photo-1554727242-741c14fa561c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
-          alt: 'Laura Simmons Image',
+          src: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=300&q=80',
+          alt: 'Ing. Víctor Soria',
         },
       },
       {
-        testimonial: `We entrusted Sarah with revamping our website's user interface, and the results were astounding. Her intuitive design sense enhanced user experience, leading to a significant increase in engagement. She's a designer who truly understands the synergy of aesthetics and functionality.`,
-        name: 'Alex Foster',
-        job: 'Director of web services',
+        testimonial: `Profesional íntegro con capacidad para integrarse a equipos multidisciplinarios e internacionales, aportando metodologías ágiles, solvencia técnica y enfoque continuo a la resolución de problemas de negocio.`,
+        name: 'Lsi. Óscar Apolinario, MSc.',
+        job: 'Jefe de Internet de las Cosas (IoT) — Claro Ecuador',
         image: {
-          src: 'https://images.unsplash.com/photo-1599566150163-29194dcaad36?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
-          alt: 'Alex Foster Image',
-        },
-      },
-      {
-        testimonial: `She took our vision and elevated it beyond imagination. Her ability to capture brand essence and translate it into design is nothing short of remarkable. Working with her has been an inspiring journey.`,
-        name: 'Jessica Collins',
-        job: 'Product Manager',
-        image: {
-          src: 'https://images.unsplash.com/photo-1548142813-c348350df52b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=778&q=80',
-          alt: 'Jessica Collins Image',
-        },
-      },
-      {
-        testimonial: `Her ability to transform concepts into captivating visuals is nothing short of extraordinary. She took our event poster idea and turned it into a visual masterpiece that perfectly captured the essence of our festival. Sarah's dedication, creativity, and knack for delivering beyond expectations make her an invaluable asset to any project.`,
-        name: 'Michael Carter',
-        job: 'Event Coordinator',
-        image: {
-          src: 'https://images.unsplash.com/photo-1566492031773-4f4e44671857?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
-          alt: 'Michael Carter Image',
+          src: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=300&q=80',
+          alt: 'Lsi. Óscar Apolinario',
         },
       },
     ]}
   />
 
-  <!-- CallToAction Widget *********** -->
 
-  <CallToAction
-    title="Let's create together"
-    subtitle="Ready to transform your vision into captivating designs?"
-    actions={[
-      {
-        variant: 'primary',
-        text: 'Hire me',
-        href: '/',
-      },
-    ]}
-  />
+<CallToAction
+  title="¿Listo para potenciar tu infraestructura?"
+  subtitle="Disponible para proyectos y consultoría en Cloud, DevSecOps y Automatización."
+  actions={[
+    {
+      variant: 'primary',
+      text: 'Conectar en LinkedIn',
+      href: 'https://www.linkedin.com/in/kevinfalcones/',
+      target: '_blank',
+      icon: 'tabler:brand-linkedin',
+    },
+    {
+      text: 'Enviar Correo',
+      href: 'mailto:johvin73@gmail.com',
+      icon: 'tabler:mail',
+    },
+  ]}
+/>
 
-  <!-- BlogLatestPost Widget **************** -->
-
-  <BlogLatestPosts
-    id="blog"
-    title="Explore my insightful articles on my blog"
-    information={`Dive into a realm of design wisdom and creative inspiration, where you'll find invaluable insights, practical tips, and captivating narratives that elevate and enrich your creative journey.`}
-  >
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </BlogLatestPosts>
-</Layout>
+  
+ 
