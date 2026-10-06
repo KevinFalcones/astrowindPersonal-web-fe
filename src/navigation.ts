@@ -3,6 +3,10 @@ import { getPermalink, getBlogPermalink, getAsset } from './utils/permalinks';
 export const headerData = {
   links: [
     {
+      text: 'Curriculum',
+      href: getPermalink('/homes/personal'),
+    },
+    {
       text: 'Homes',
       links: [
         {
@@ -16,10 +20,6 @@ export const headerData = {
         {
           text: 'Mobile App',
           href: getPermalink('/homes/mobile-app'),
-        },
-        {
-          text: 'Personal',
-          href: getPermalink('/homes/personal'),
         },
       ],
     },
@@ -110,12 +110,8 @@ export const headerData = {
         },
       ],
     },
-    {
-      text: 'Widgets',
-      href: '#',
-    },
   ],
-  actions: [{ text: 'Download', href: 'https://github.com/arthelokyo/astrowind', target: '_blank' }],
+  actions: [{ text: 'Hire me', href: 'mailto:kfalconesj@gmail.com', target: '_blank' }],
 };
 
 export const footerData = {
@@ -170,13 +166,13 @@ export const footerData = {
     { text: 'Privacy Policy', href: getPermalink('/privacy') },
   ],
   socialLinks: [
-    { ariaLabel: 'X', icon: 'tabler:brand-x', href: '#' },
-    { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: '#' },
-    { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: 'https://www.facebook.com/KevinFalconesOficial' },
     { ariaLabel: 'LinkedIn', icon: 'tabler:brand-linkedin', href: 'https://www.linkedin.com/in/kevinfalcones/' },
-    { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/KevinFalcones' },
+    { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/KevinFalcones/' },
+    { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: 'https://www.instagram.com/kevinfalconesoficial/' },
+    { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: 'https://www.facebook.com/KevinFalconesOficial/' },
+    { ariaLabel: 'Tiktok', icon: 'tabler:brand-tiktok', href: 'https://www.tiktok.com/kevinfalconesoficial/' },
   ],
   footNote: `
-    Made by <a class="text-blue-600 underline dark:text-muted" href="https://github.com/KevinFalcones"> Kevin Falcones</a> · All rights reserved.
+    Made by <a class="text-blue-600 underline dark:text-muted" href="https://github.com/KevinFalcones"> Kevin Falcones</a> · 2026 · All rights reserved.
   `,
 };
